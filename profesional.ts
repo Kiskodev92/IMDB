@@ -7,5 +7,7 @@ class Profesional{
     public nationality: string;
     public oscarsNumber: number;
     public profession: string;
-    constructor()
+    constructor(name: string, age: number, weight: number, isRetired: boolean, nationality: string, oscarsNumber: number, profession: string){
+        
+    }
 }
