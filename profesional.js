@@ -2,10 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Profesional = void 0;
 var Profesional = /** @class */ (function () {
-    function Profesional(name, age, weight, isRetired, nationality, oscarsNumber, profession) {
+    function Profesional(name, age, weight, height, isRetired, nationality, oscarsNumber, profession) {
         this.name = name;
         this.age = age;
         this.weight = weight;
+        this.height = height;
         this.isRetired = isRetired;
         this.nationality = nationality;
         this.oscarsNumber = oscarsNumber;
