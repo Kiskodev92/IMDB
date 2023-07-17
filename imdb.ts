@@ -18,7 +18,7 @@ export class imdb{
         return objDato;
     }
 }
-let dvd : imdb = new imdb();
+let dvd = new imdb();
 
 let objImdb = JSON.stringify(dvd)
 
