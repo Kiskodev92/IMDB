@@ -13,16 +13,9 @@ var imdb = /** @class */ (function () {
     imdb.prototype.obtenerInstanciaIMDB = function (nombreFichero) {
         var dato = fs.readFileSync(nombreFichero, "utf8");
         var obj = JSON.parse(dato);
-        var objDato = Object.assign(new imdb(), obj);
-        return objDato;
+        console.log(obj);
+        return obj;
     };
     return imdb;
 }());
 exports.imdb = imdb;
-var dvd = new imdb();
-var objImdb = JSON.stringify(dvd);
-fs.writeFileSync("imdbBBDD.json", objImdb);
-var data = fs.readFileSync("imdbBBDD.json", "utf8");
-console.log(data);
-var insImdb = JSON.parse(data);
-console.log(insImdb);

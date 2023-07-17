@@ -6,7 +6,7 @@ export class imdb{
     constructor(){
         this.peli = [];
     }
-    escribirEnFicheroJSON(nombreFichero : string){
+    escribirEnFicheroJSON(nombreFichero : string):void{
         let newJson = JSON.stringify(this.peli);
         fs.writeFileSync(nombreFichero, newJson)
         ;
@@ -14,20 +14,7 @@ export class imdb{
     obtenerInstanciaIMDB(nombreFichero : string) : imdb {
         let dato =fs.readFileSync(nombreFichero ,"utf8")
         let obj=JSON.parse(dato)
-        let objDato = Object.assign(new imdb(),obj)
-        return objDato;
+        console.log(obj)
+        return obj;
     }
 }
-let dvd = new imdb();
-
-let objImdb = JSON.stringify(dvd)
-
-fs.writeFileSync("imdbBBDD.json",objImdb)
-
-let data = fs.readFileSync("imdbBBDD.json", "utf8")
-
-console.log(data);
-
-let insImdb = JSON.parse(data)
-
-console.log(insImdb);

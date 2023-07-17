@@ -20,10 +20,14 @@ export class Movie{
         this.genre = genre;
     }
     toString() : string{
+        let act : string = "";
+        for(let actor in this.actors){
+             act += this.actors[actor].toString()
+        }
         let pelicula = `        
         Titulo - ${this.title} 
         Estreno - ${this.releaseYear}
-        Actores - ${this.actors}
+        Actores - ${act}
         Nacionalidad - ${this.nacionality}
         Director - ${this.director}
         Escritor - ${this.writer}
